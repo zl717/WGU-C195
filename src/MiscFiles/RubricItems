@@ -1,0 +1,44 @@
+A.   Create a log-in form that can determine the user’s location and translate log-in and error control messages (e.g., “The username and password did not match.”) into two languages.
+
+B.   Provide the ability to add, update, and delete customer records in the database, including name, address, and phone number.
+
+C.   Provide the ability to add, update, and delete appointments, capturing the type of appointment and a link to the specific customer record in the database.
+Click appointment in table view to select for operation.
+
+D.   Provide the ability to view the calendar by month and by week.
+View appointments button bottom left of home screen
+
+E.    Provide the ability to automatically adjust appointment times based on user time zones and daylight saving time.
+HomeController.getAllAppts(); Zoned times appear in the table view on home screen.
+
+F.   Write exception controls to prevent each of the following. You may use the same mechanism of exception control more than once, but you must incorporate at least  two different mechanisms of exception control.
+•   scheduling an appointment outside business hours
+SaveNewAppointmentsController: Available times users may pick are limited to be within business hours.  There is no way to schedule outside business hours.
+•   scheduling overlapping appointments
+SaveNewAppointmentsController: Line - 174
+•   entering nonexistent or invalid customer data
+SaveNewAppointmentsController: Line - 176, SaveNewAppointmentsController: Line - 223, SaveNewAppointmentsController: Line - 47 (sql exception thrown if invalid input)
+•   entering an incorrect username and password
+LoginController: Line - 97
+
+
+G.  Write two or more lambda expressions to make your program more efficient, justifying the use of each lambda expression with an in-line comment.
+HomeController: Line - 252, SaveNewAppointmentsController: Line - 291 (duplicated in EditAppointmentController)
+
+
+H.   Write code to provide an alert if there is an appointment within 15 minutes of the user’s log-in.
+HomeController: Line - 156 Message will appear in text area at the bottom of the home screen.
+
+I.   Provide the ability to generate each  of the following reports:
+•   number of appointment types by month
+•   the schedule for each consultant
+•   one additional report of your choice
+Custom report - total number of appointments in database displayed in console upon clicking the generate reports button. The additional report displays after the 2 specified reports.
+Code located in HomeController: Lines 183-222
+
+
+J.   Provide the ability to track user activity by recording timestamps for user log-ins in a .txt file. Each new record should be appended to the log file, if the file already exists.
+UserActivity.txt. Updates on program close.
+
+
+K. Demonstrate professional communication in the content and presentation of your submission.

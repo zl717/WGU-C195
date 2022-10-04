@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.HomeController">
+   <children>
+      <Button fx:id="saveContactButton" layoutX="653.0" layoutY="561.0" mnemonicParsing="false" onAction="#openSaveNewContactInfo" prefHeight="25.0" prefWidth="133.0" text="Save Contact Info" />
+      <Button layoutX="653.0" layoutY="529.0" mnemonicParsing="false" onAction="#openEditContactInfo" prefHeight="25.0" prefWidth="133.0" text="Edit Contact Info" />
+      <Button fx:id="newAppointmentButton" layoutX="14.0" layoutY="529.0" mnemonicParsing="false" onAction="#openSaveNewAppointment" prefHeight="25.0" prefWidth="120.0" text="New Appointment" />
+      <Button fx:id="viewAppointmentsButton" layoutX="14.0" layoutY="561.0" mnemonicParsing="false" onAction="#openViewAppointments" text="View Appointments" />
+      <TableView fx:id="appointmentsTable" layoutX="74.0" layoutY="64.0" prefHeight="390.0" prefWidth="676.0">
+        <columns>
+          <TableColumn fx:id="apptIdColumn" prefWidth="75.0" text="Appt ID" />
+          <TableColumn fx:id="titleColumn" prefWidth="75.0" text="Title" />
+            <TableColumn fx:id="typeColumn" prefWidth="75.0" text="Type" />
+            <TableColumn fx:id="contactColumn" prefWidth="75.0" text="Contact" />
+            <TableColumn fx:id="startColumn" prefWidth="116.0" text="Start Time" />
+            <TableColumn fx:id="endColumn" prefWidth="116.0" text="End Time" />
+            <TableColumn fx:id="timeZoneColumn" minWidth="0.0" prefWidth="63.0" text="Time Zone" visible="false" />
+            <TableColumn fx:id="locationColumn" prefWidth="136.0" text="Location" />
+        </columns>
+      </TableView>
+      <Button fx:id="deleteButton" layoutX="581.0" layoutY="468.0" mnemonicParsing="false" onAction="#deleteAppointment" text="Delete" />
+      <Button fx:id="editButton" layoutX="508.0" layoutY="468.0" mnemonicParsing="false" onAction="#OpenEditAppointment" prefHeight="25.0" prefWidth="51.0" text="Edit" />
+      <Label fx:id="userLocationLabel" layoutX="82.0" layoutY="472.0" prefHeight="17.0" prefWidth="244.0" text="User Location: " />
+      <TextArea fx:id="appointmentSoon" layoutX="264.0" layoutY="501.0" prefHeight="97.0" prefWidth="270.0" promptText="Warning will appear if appointment within 15 minutes">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextArea>
+      <Button fx:id="generateReportsButton" layoutX="641.0" layoutY="23.0" mnemonicParsing="false" onAction="#generateReports" text="Generate Reports" />
+   </children>
+</AnchorPane>
